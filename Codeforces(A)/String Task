@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+    	Scanner sc=new Scanner(System.in);
+    	String s=sc.next();
+    	s=s.toLowerCase();
+    	StringBuilder sb=new StringBuilder();
+    	for(char ch:s.toCharArray()) {
+    		if(!vowel(ch)) {
+    			sb.append(".");
+    			sb.append(ch);
+    		}
+    	}
+    	System.out.println(sb.toString());
+    }
+    public static boolean vowel(char ch) {
+    	return ch=='a' ||ch=='e' || ch=='i' || ch=='o' || ch=='u' || ch=='y';
+    	
+    }
+}
